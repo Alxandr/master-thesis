@@ -18,6 +18,7 @@
 %% Even for English reports, some sections might be in Dutch, for example on
 %% the title page.
 \RequirePackage[main=english,norsk]{babel}
+\RequirePackage{csquotes}
 \RequirePackage[nooneline,footnotesize]{caption}
 \RequirePackage{fancyhdr}
 \RequirePackage[flushmargin,hang]{footmisc}
