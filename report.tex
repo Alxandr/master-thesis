@@ -1,0 +1,56 @@
+\documentclass{tudelft-report}
+
+\usepackage{biblatex}
+\addbibresource{references.bib}
+
+\begin{document}
+
+%% Use Roman numerals for the page numbers of the title pages and table of
+%% contents.
+\frontmatter
+
+\title[Optional Subtitle]{Cheating at digital exams at NTNU}
+\author{Aleksander Heintz}
+\affiliation{NTNU}
+%\coverimage{cover.jpg}
+\makecover
+
+%% Include an optional title page.
+\input{title}
+
+%% Abstract
+\chapter*{Abstract}
+\input{tex/abstract}
+
+%% Acknowledgements
+\chapter*{Acknowledgements}
+\input{tex/acknowledgements}
+
+%\input{preface}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\chapter{Glossary}
+\input{tex/glossary}
+
+\chapter{Acronyms}
+\input{tex/acronyms}
+
+%% Use Arabic numerals for the page numbers of the chapters.
+\mainmatter
+
+\chapter{Introduction}
+\input{tex/chapter-1/index}
+\input{tex/chapter-1/background}
+
+%% Use letters for the chapter numbers of the appendices.
+\appendix
+
+%\input{appendix-a}
+
+\printbibliography
+
+\end{document}
+

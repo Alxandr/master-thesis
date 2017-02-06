@@ -1,0 +1,1 @@
+I would like to thank foo and bar.

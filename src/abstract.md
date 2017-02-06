@@ -1,0 +1,5 @@
+In today's world where everything is increasingly done on computers, university exams are traditionally lagging behind and are still conducted using pen and paper for the most part. Recently however, NTNU has started a slow migration process towards digital exams using Safe Exam Browser and Inspera Assessment on private devices brought by the students on the exam day.
+
+Digital exams has the potential to resolve some of the issues with old style pen and paper exams, however that is not without bringing it's own set of problems into the mix. In this thesis I will be looking at specifically how digital exams using Safe Exam Browser and Inspera Assessment software might enable students to cheat on the exams in ways that were not possible on pen and paper exams.
+
+I will be focusing on the interactions between the three components Safe Exam Browser, Inspera Assessment and the students own computer to look at both technical and theoretical ways that students can cheat during digital exams at NTNU. And where possible, I will be providing solutions/mitigations to any problems I do discover.
