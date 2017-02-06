@@ -1,0 +1,8 @@
+dependencies:
+  pre:
+    - sudo apt-get update; sudo apt-get install texlive pandoc pandoc-citeproc
+
+compile:
+  override:
+    - ./build.sh
+    - cp report.pdf $CIRCLE_ARTIFACTS
