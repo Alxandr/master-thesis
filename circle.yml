@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    - sudo apt-get update; sudo apt-get install texlive pandoc pandoc-citeproc texlive-xetex biber
+    - sudo apt-get update; sudo apt-get install texlive-full pandoc pandoc-citeproc texlive-xetex biber
 
 compile:
   override:
