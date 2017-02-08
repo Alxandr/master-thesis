@@ -36,3 +36,5 @@ machine:
   ruby:
     version:
       2.4.0
+  environment:
+    PATH: "$PATH:$HOME/.local/bin"

@@ -8,3 +8,7 @@ LMS
 
 SEB
 : Safe Exam Browser.
+
+NTNU
+: Norwegian University of Science and Technology - Norges 
+  teknisk-naturvitenskapelige universitet.

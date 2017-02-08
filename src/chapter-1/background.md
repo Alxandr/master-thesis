@@ -1,9 +1,9 @@
 # Background
 Digital exams in and of themselves is not a new concept. The fact that we do
 everything else on a computer today inevitably leads to the desire for the exams
-themselves to be done digitally.Digital exams comes with several advantages over
-pen and paper exams. Some of these advantages include but are not limited to
-[@Sindre2015]:
+themselves to be done digitally. Digital exams comes with several advantages
+over pen and paper exams. Some of these advantages include but are not limited
+to [@Sindre2015]:
 
 * People might be more used to writing on computers than with pen and paper.
 * No need to use large amounts of paper for the exams . Both the questions and

@@ -6,6 +6,8 @@ Inspera
 : Inspera Assessment is a norwegian company that provides a website in which it
   is possible to author and take exams.
 
-NTNU
-: Norwegian University of Science and Technology - Norges 
-  teknisk-naturvitenskapelige universitet.
+Safe environment
+: Safe Exam Browser creates what is known as a safe environment (and conversely
+  when not running in SEB it is considered an unsafe environment). Safe
+  environment indicates that students will only be allowed to access what the
+  author of the exam intended the student to access.
