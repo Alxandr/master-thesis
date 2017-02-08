@@ -13,4 +13,6 @@ access other resources available on their own computers, and Inspera Assessment
 (Inspera) to do the presentation of exams and collection of exam results.
 
 There are already several studies [@Søgaard2015][@Søgaard2016] looking at how
-secure SEB is.
+secure SEB is. However, this is only one part of the solution selected by NTNU
+in their digital exam solution and there are other parts that needs to be
+assessed as well.
