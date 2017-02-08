@@ -20,3 +20,7 @@ compile:
   override:
     - make
     - cp report.pdf $CIRCLE_ARTIFACTS
+
+machine:
+  node:
+    version: node
