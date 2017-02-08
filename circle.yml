@@ -4,7 +4,7 @@ dependencies:
   pre:
     - sudo rm -rf /var/cache/apt/archives && sudo ln -s ~/.apt-cache /var/cache/apt/archives && mkdir -p ~/.apt-cache/partial
     - sudo apt-get update; sudo apt-get install texlive-full pandoc pandoc-citeproc inkscape
-    - sudo npm install -g mermaid
+    - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
     - |
       pushd $HOME/deps/pandoc-mermaid
       stack --no-terminal --install-ghc test --bench --only-dependencies
@@ -12,6 +12,8 @@ dependencies:
       popd
 
 checkout:
+  pre:
+    - echo $PATH
   post:
     - mkdir -p $HOME/deps
     - git clone https://github.com/Alxandr/pandoc-mermaid.git $HOME/deps/pandoc-mermaid
@@ -24,3 +26,8 @@ compile:
 machine:
   node:
     version: node
+  ruby:
+    version:
+      2.4.0
+  environment:
+    PATH: "$HOME/.linuxbrew/bin:$PATH"
