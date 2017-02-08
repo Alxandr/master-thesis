@@ -1,5 +1,5 @@
 PANDOC             = pandoc
-PANDOC_LATEX_FLAGS = -f markdown -t latex --filter=pandoc-citeproc --bibliography references.bib --biblatex
+PANDOC_LATEX_FLAGS = -f markdown -t latex --filter=pandoc-citeproc --filter pandoc-mermaid --bibliography references.bib --biblatex
 MARKDOWN_FILES     = $(shell find src -type f -name '*.md')
 TEX_FILES          = $(patsubst src/%.md,tex/%.tex,$(MARKDOWN_FILES))
 
