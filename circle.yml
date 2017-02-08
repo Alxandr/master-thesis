@@ -5,7 +5,7 @@ dependencies:
   pre:
     - sudo rm -rf /var/cache/apt/archives && sudo ln -s ~/.apt-cache /var/cache/apt/archives && mkdir -p ~/.apt-cache/partial
     - echo "" | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
-    - brew install phantomjs haskell-stack pandoc pandoc-citeproc
+    - brew install haskell-stack pandoc pandoc-citeproc
     - |
       pushd $HOME/deps/pandoc-mermaid
       stack --no-terminal --install-ghc test --bench --only-dependencies
@@ -26,6 +26,8 @@ compile:
     - cp report.pdf $CIRCLE_ARTIFACTS
 
 machine:
+  pre:
+    - sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
   node:
     version: node
   ruby:

@@ -12,4 +12,5 @@ for a solution using Safe Exam Browser (SEB) to ensure that students cannot
 access other resources available on their own computers, and Inspera Assessment
 (Inspera) to do the presentation of exams and collection of exam results.
 
-There are already several studies [@seb1, @seb2] looking at how secure SEB is.
+There are already several studies [@Søgaard2015][@Søgaard2016] looking at how
+secure SEB is.
