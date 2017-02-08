@@ -5,7 +5,7 @@ dependencies:
   pre:
     - wget https://github.com/commercialhaskell/stack/releases/download/v1.3.2/stack-1.3.2-linux-x86_64.tar.gz -O /tmp/stack.tar.gz
     - |
-      tar zxvf /tmp/stack.tar.gz
+      tar zxvf /tmp/stack.tar.gz -C /tmp
       chmod +x /tmp/stack-1.3.2-linux-x86_64/stack
       sudo cp /tmp/stack-1.3.2-linux-x86_64/stack /usr/bin/stack
     - sudo rm -rf /var/cache/apt/archives && sudo ln -s ~/.apt-cache /var/cache/apt/archives && mkdir -p ~/.apt-cache/partial
