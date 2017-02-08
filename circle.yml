@@ -6,14 +6,15 @@ dependencies:
     - sudo apt-get update; sudo apt-get install texlive-full pandoc pandoc-citeproc inkscape
     - sudo npm install -g mermaid
     - |
-      pushd /deps/pandoc-mermaid
+      pushd $HOME/deps/pandoc-mermaid
       stack --no-terminal --install-ghc test --bench --only-dependencies
       stack --no-terminal install --bench --no-run-benchmarks --haddock --no-haddock-deps
+      popd
 
 checkout:
   post:
-    - mkdir -p /deps
-    - git clone https://github.com/Alxandr/pandoc-mermaid.git /deps/pandoc-mermaid
+    - mkdir -p $HOME/deps
+    - git clone https://github.com/Alxandr/pandoc-mermaid.git $HOME/deps/pandoc-mermaid
 
 compile:
   override:
