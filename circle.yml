@@ -3,7 +3,17 @@ dependencies:
     - "~/.apt-cache"
   pre:
     - sudo rm -rf /var/cache/apt/archives && sudo ln -s ~/.apt-cache /var/cache/apt/archives && mkdir -p ~/.apt-cache/partial
-    - sudo apt-get update; sudo apt-get install texlive-full pandoc pandoc-citeproc
+    - sudo apt-get update; sudo apt-get install texlive-full pandoc pandoc-citeproc inkscape
+    - sudo npm install -g mermaid
+    - |
+      pushd /deps/pandoc-mermaid
+      stack --no-terminal --install-ghc test --bench --only-dependencies
+      stack --no-terminal install --bench --no-run-benchmarks --haddock --no-haddock-deps
+
+checkout:
+  post:
+    - mkdir -p /deps
+    - git clone https://github.com/Alxandr/pandoc-mermaid.git /deps/pandoc-mermaid
 
 compile:
   override:
