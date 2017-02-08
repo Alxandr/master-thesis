@@ -1,0 +1,18 @@
+{
+    "language": "en_US",
+    "ignoreWordsList": [
+        "NTNU",
+        "internet",
+        "Inspera",
+        "seb1",
+        "seb2"
+    ],
+    "documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "ignoreRegExp": [],
+    "ignoreFileExtensions": [],
+    "checkInterval": 5000
+}

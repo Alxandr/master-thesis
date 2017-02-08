@@ -1,16 +1,17 @@
 dependencies:
   cache_directories:
     - "~/.apt-cache"
+    - "~/.linuxbrew"
   pre:
     - sudo rm -rf /var/cache/apt/archives && sudo ln -s ~/.apt-cache /var/cache/apt/archives && mkdir -p ~/.apt-cache/partial
     - echo "" | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
-    - brew install phantomjs haskell-stack
+    - brew install phantomjs haskell-stack pandoc pandoc-citeproc
     - |
       pushd $HOME/deps/pandoc-mermaid
       stack --no-terminal --install-ghc test --bench --only-dependencies
       stack --no-terminal install --bench --no-run-benchmarks --haddock --no-haddock-deps
       popd
-    - sudo apt-get update; sudo apt-get install texlive-full pandoc pandoc-citeproc inkscape
+    - sudo apt-get update; sudo apt-get install texlive-full inkscape
 
 checkout:
   pre:

@@ -1,15 +1,15 @@
 # Background
 Digital exams in and of themselves is not a new concept. The fact that we do
-everything else on a computer nowdays inevetably leads to the desire for the
-exams themselves to be done digitally.Digital exams comes with several
-advantages over pen and paper exams. Some of these advantages include but are
-not limited to [@eexamiprov]:
+everything else on a computer today inevitably leads to the desire for the exams
+themselves to be done digitally.Digital exams comes with several advantages over
+pen and paper exams. Some of these advantages include but are not limited to
+[@eexamiprov]:
 
 * People might be more used to writing on computers than with pen and paper.
 * No need to use large amounts of paper for the exams . Both the questions and
   answers are provided digitally, instead of using what is probably thousands of
   pieces of paper per exam.
-* Remove posibility of exam papers getting lost, wrong papers (like the answers
+* Remove possibility of exam papers getting lost, wrong papers (like the answers
   instead of the questions) being given to the students.
 * A lot of user errors might become impossible when a computer system can
   dictate what action can be done at what time.
@@ -21,10 +21,10 @@ While it is true that a good amount of problems with pen and paper exams might
 be mitigated by making them digital, digital exams provide their own set of
 challenges and issues. Some of these are simply new logistical challenges like
 the fact that all students are suddenly required to have a laptop available for
-taking the exam (something that most people do have today, but nontheless it
+taking the exam (something that most people do have today, but nonetheless it
 might exclude some people). Another issue is that the software used for the
-exams (Safe Exam Browser) does not currently support linux, meaning that people
-who do use linux on their computers (which in university students is probably a
+exams (Safe Exam Browser) does not currently support Linux, meaning that people
+who do use Linux on their computers (which in university students is probably a
 lot higher than most crowds) might have problems taking the exams. Another issue
 is the fact that the exams can only be held in a room with enough power outlets
 for all the students. Other errors might include:
@@ -35,7 +35,7 @@ for all the students. Other errors might include:
   want to do pen and paper exams during a power outage either.
 * Internet failure. Same as with power outage, if the internet is down for some
   reason then exams cannot be executed. This is slightly more likely than a
-  power outage, but still higly improbably in Norway today. However, this is
+  power outage, but still highly improbably in Norway today. However, this is
   something which could make digital exams impossible to perform while having no
   impact at all on pen and paper exams.
 * Software failure. Problems with the LMS (Inspera Assessment in the case of
