@@ -10,6 +10,8 @@ dependencies:
       sudo cp /tmp/stack-1.3.2-linux-x86_64/stack /usr/bin/stack
     - sudo rm -rf /var/cache/apt/archives && sudo ln -s ~/.apt-cache /var/cache/apt/archives && mkdir -p ~/.apt-cache/partial
     - |
+      mkdir -p $HOME/deps
+      git clone https://github.com/Alxandr/pandoc-mermaid.git $HOME/deps/pandoc-mermaid
       pushd $HOME/deps/pandoc-mermaid
       stack --no-terminal --install-ghc test --bench --only-dependencies
       stack --no-terminal install --bench --no-run-benchmarks --haddock --no-haddock-deps
@@ -19,9 +21,6 @@ dependencies:
 checkout:
   pre:
     - echo $PATH
-  post:
-    - mkdir -p $HOME/deps
-    - git clone https://github.com/Alxandr/pandoc-mermaid.git $HOME/deps/pandoc-mermaid
 
 compile:
   override:

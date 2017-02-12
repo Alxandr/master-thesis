@@ -2,6 +2,7 @@
 
 \usepackage{import}
 \usepackage{biblatex}
+\usepackage{cleveref}
 
 \addbibresource{references.bib}
 
@@ -30,7 +31,7 @@
 
 %\input{preface}
 
-\renewcommand{\baselinestretch}{1.0}
+\renewcommand{\baselinestretch}{0.8}
 \tableofcontents
 \listoffigures
 \listoftables
@@ -45,11 +46,17 @@
 %% Use Arabic numerals for the page numbers of the chapters.
 \mainmatter
 
-\chapter{Introduction}
+\chapter{Introduction}\label{cha:1}
 \input{tex/chapter-1/index}
 \input{tex/chapter-1/background}
 \input{tex/chapter-1/motivation}
 \input{tex/chapter-1/scope}
+\input{tex/chapter-1/questions}
+\input{tex/chapter-1/methods}
+\input{tex/chapter-1/ethical}
+\input{tex/chapter-1/outline}
+
+\chapter{Background Research and Related Work}\label{cha:2}
 
 %% Use letters for the chapter numbers of the appendices.
 \appendix

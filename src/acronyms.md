@@ -10,5 +10,9 @@ SEB
 : Safe Exam Browser.
 
 NTNU
-: Norwegian University of Science and Technology - Norges 
+: Norwegian University of Science and Technology - Norges
   teknisk-naturvitenskapelige universitet.
+
+FEIDE
+: Felles Elektronisk IDEntitet is a common identity solution employed by the
+  Norwegian department of education.

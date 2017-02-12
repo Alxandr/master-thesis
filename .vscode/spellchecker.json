@@ -1,14 +1,16 @@
 {
     "language": "en_US",
     "ignoreWordsList": [
+        "seb1",
+        "seb2",
         "NTNU",
         "internet",
         "Inspera",
-        "seb1",
-        "seb2",
         "DDoS",
         "online",
-        "Wikipedia"
+        "Wikipedia",
+        "FEIDE",
+        "breakins"
     ],
     "documentTypes": [
         "markdown",
