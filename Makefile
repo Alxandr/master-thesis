@@ -15,3 +15,4 @@ tex/%.tex: src/%.md tex
 tex:
 	@mkdir -p tex
 	@mkdir -p tex/chapter-1
+	@mkdir -p tex/chapter-2

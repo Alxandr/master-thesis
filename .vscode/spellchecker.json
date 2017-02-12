@@ -10,7 +10,11 @@
         "online",
         "Wikipedia",
         "FEIDE",
-        "breakins"
+        "breakins",
+        "SHA256",
+        "HMAC",
+        "XULRunner",
+        "chromeless"
     ],
     "documentTypes": [
         "markdown",
