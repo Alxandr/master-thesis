@@ -3,7 +3,7 @@ Digital exams in and of themselves is not a new concept. The fact that we do
 everything else on a computer today inevitably leads to the desire for the exams
 themselves to be done digitally. Digital exams comes with several advantages
 over pen and paper exams. Some of these advantages include but are not limited
-to [@Sindre2015]:
+to [@Sindre2015][@Hillier2015]:
 
 * People might be more used to writing on computers than with pen and paper.
 * No need to use large amounts of paper for the exams . Both the questions and
@@ -41,7 +41,7 @@ for all the students. Other errors might include:
 * Software failure. Problems with the LMS (Inspera Assessment in the case of
   NTNU) can result in people being unable to take the exam, or worse
   displacement/mismanagement of the results. It could also result in people
-  being given the wrong exams or no exam at all. And if the LMS had a security 
+  being given the wrong exams or no exam at all. And if the LMS had a security
   breach, a student might be able to alter his/her responses after the exam has
   ended (when said student has regained access to the course book and/or other
   learning material).

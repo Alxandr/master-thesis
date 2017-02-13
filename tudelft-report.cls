@@ -120,13 +120,15 @@
         BoldItalicFont = *-BoldItalic
     ]{Raleway}
     \setmonofont[
-        Path = fonts/Raleway/,
+        Path = fonts/Fira_Mono/,
         Extension = .ttf,
         UprightFont = *-Regular,
         BoldFont = *-Bold,
-        ItalicFont = *-Italic,
-        BoldItalicFont = *-BoldItalic
-    ]{Raleway}
+        ItalicFont = *-Regular,
+        ItalicFeatures = FakeSlant,
+        BoldItalicFont = *-Bold,
+        BoldItalicFeatures = FakeSlant
+    ]{FiraMono}
     \setmathfont[
         Path = fonts/Cambria_Math/,
         Extension = .ttf

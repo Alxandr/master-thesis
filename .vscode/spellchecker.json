@@ -3,18 +3,20 @@
     "ignoreWordsList": [
         "seb1",
         "seb2",
+        "FEIDE",
+        "SHA256",
+        "HMAC",
+        "XULRunner",
+        "chromeless",
         "NTNU",
         "internet",
         "Inspera",
         "DDoS",
         "online",
         "Wikipedia",
-        "FEIDE",
         "breakins",
-        "SHA256",
-        "HMAC",
-        "XULRunner",
-        "chromeless"
+        "macOS",
+        "WebKit"
     ],
     "documentTypes": [
         "markdown",
