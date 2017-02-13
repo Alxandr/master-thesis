@@ -15,19 +15,19 @@ to [@Sindre2015][@Hillier2015]:
   dictate what action can be done at what time.
 
 However, just because digital exams can provide advantages over pen and paper
-exams does not mean that they are the final solution to the exam problem, and
-simply making the exams digital would solve all problems exams today faces.
-While it is true that a good amount of problems with pen and paper exams might
-be mitigated by making them digital, digital exams provide their own set of
-challenges and issues. Some of these are simply new logistical challenges like
-the fact that all students are suddenly required to have a laptop available for
-taking the exam (something that most people do have today, but nonetheless it
-might exclude some people). Another issue is that the software used for the
-exams (Safe Exam Browser) does not currently support Linux, meaning that people
-who do use Linux on their computers (which in university students is probably a
-lot higher than most crowds) might have problems taking the exams. Another issue
-is the fact that the exams can only be held in a room with enough power outlets
-for all the students. Other errors might include:
+exams does not mean that they are the be-all and end-all for exams, and simply
+making the exams digital would solve all problems exams today faces. While it is
+true that a good amount of problems with pen and paper exams might be mitigated
+by making them digital, digital exams provide their own set of challenges and
+issues. Some of these are simply new logistical challenges like the fact that
+all students are suddenly required to have a laptop available for taking the
+exam (something that most people do have today, but nonetheless it might exclude
+some people). Another issue is that the software used for the exams (Safe Exam
+Browser) does not currently support Linux, meaning that people who do use Linux
+on their computers (which in university students is probably a lot higher than
+most crowds) might have problems taking the exams. Another issue is the fact
+that the exams can only be held in a room with enough power outlets for all the
+students. Other errors might include:
 
 * Power outage. Exams might not be doable because of a power outage preventing
   people from using their computers. Today however this is highly unlikely, not
