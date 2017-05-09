@@ -24,6 +24,8 @@
 \RequirePackage[flushmargin,hang]{footmisc}
 \RequirePackage{ifpdf}
 \RequirePackage{ifxetex}
+\RequirePackage{letltxmacro}
+\RequirePackage{framed}
 \ifxetex
     \RequirePackage[xetex]{geometry}
     \RequirePackage[xetex]{graphicx}
@@ -511,3 +513,40 @@
 %% Definition list
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%% Set max image width to be 0.9 times line width:
+\makeatletter
+\def\maxwidth#1{\ifdim\Gin@nat@width>#1 #1\else\Gin@nat@width\fi}
+\makeatother
+
+%% Renew include graphics so that it isn't too big
+% save the meaning of \includegraphics
+\LetLtxMacro\latexincludegraphics\includegraphics
+
+% pass the image to \shadowbox
+\renewcommand{\includegraphics}[2][]{\latexincludegraphics[width=\maxwidth{0.9\textwidth}]{#2}}
+
+%% Make a better leftbar
+\newlength{\leftbarwidth}
+\setlength{\leftbarwidth}{3pt}
+\newlength{\leftbarsep}
+\setlength{\leftbarsep}{10pt}
+\newcommand*{\leftbarcolorcmd}{\color{leftbarcolor}}% as a command to be more flexible
+\colorlet{leftbarcolor}{lightgray}
+
+\renewenvironment{leftbar}{%
+  \def\FrameCommand{{\leftbarcolorcmd{\vrule width \leftbarwidth\relax\hspace {\leftbarsep}}}}%
+  \MakeFramed {\advance \hsize -\width \FrameRestore }%
+}{%
+  \endMakeFramed
+}
+
+%% Renew quote environment
+% save the meaning of \quote and \endquote
+\LetLtxMacro\latexquote\quote
+\LetLtxMacro\latexendquote\endquote
+
+% renew environment
+\renewenvironment{quote}%
+{\begin{leftbar}\vspace{-3ex}\begin{latexquote}}%
+{\end{latexquote}\vspace{1ex}\end{leftbar}}
