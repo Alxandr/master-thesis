@@ -21,3 +21,12 @@ starting an exam. While having a camera in the exam room might prove helpful,
 it's unlikely to be much more helpful than having invigilators, and it does
 provide some privacy issues considering the fact that the footage may be
 recorded.
+
+Swiss Federal Institute of Technology (ETH) Zurich has a rather interesting
+approach to preventing cheating at digital exams. While normally they would just
+go with a similar setup that NTNU is currently using, on some exams they would
+like the students to have access to other applications than a browser, such as
+CAD software or similar. Instead of running the LMS directly inside Safe Exam
+Browser, they run a remote desktop client which connect to a server they control
+and also runs Safe Exam Browser which then connects to the LMS and allows access
+to selected client applications on said server [@Halbherr2014].
