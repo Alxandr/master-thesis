@@ -22,7 +22,7 @@ blast during the exam. Rather you would want to take any step possible to
 prevent others from finding out that you have cheated. For instance, a clever
 student could design a chat application that looks like Inspera Assessment.
 
-## Identifying cheating using invigilators
+## Identifying cheating using invigilators {#sec:id-invigilators}
 One of the goal of having invigilators at exams is to help prevent cheating.
 They make sure that people didn't bring equipment they weren't allowed to, and
 that they do not communicate with one another. It stands to reason that

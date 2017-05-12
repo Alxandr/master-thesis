@@ -11,12 +11,11 @@ RQ1
   employed by NTNU?
 
 RQ2
-: What are some new challenges/changes in routine required by digital exams
-  that could allow students to cheat?
+: How can the ability for students to cheat during digital exam solutions be
+  reduced sufficiently so that digital exams are no more vulnerable to cheating
+  than their pen-and-paper counterpart?
 
 **RQ1** relates to attempting to work around the security features in place by
 Safe Exam Browser and Inspera Assessment, attempting to get access to resources
-I should not have access to during the exam. With regards to **RQ2** it is
-likely to end up mostly as literary studies. However, if time permits I would
-like to perform some experiments with real exam invigilators and fake exams,
-though this will likely be left to future works.
+I should not have access to during the exam. With regards to **RQ2** it will to
+some extend depend on what is discovered during **RQ1**.

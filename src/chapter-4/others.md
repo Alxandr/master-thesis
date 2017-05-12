@@ -30,3 +30,11 @@ CAD software or similar. Instead of running the LMS directly inside Safe Exam
 Browser, they run a remote desktop client which connect to a server they control
 and also runs Safe Exam Browser which then connects to the LMS and allows access
 to selected client applications on said server [@Halbherr2014].
+
+ETH Zurich also takes snapshot of the screen at regular intervals. However,
+these snapshots are never looked at unless requested by the student themselves.
+The students are assured that the snapshots will not be used to find cheaters,
+and are only there in case something goes wrong during the exam, so that most
+of the work can be recovered (in the form of images). This is a rather good
+failsafe solution as long as there are strict guarantees that it will not be
+used for surveillance.
