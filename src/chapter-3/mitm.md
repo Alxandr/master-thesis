@@ -71,7 +71,7 @@ this case you would likely have little to no clue of the fact that you did not
 get what you asked for, because for all intents and purposes you did. You just
 got a little something extra as a bonus, normally not visible to you at all.
 
-![Man in the Middle](src/chapter-3/mitm){#fig:mitm}
+![An illustration of a typical man in the middle attack. Made by Wikimedia Commons user Miraceti [@Miraceti].](fig/chapter-3/Man_in_the_middle_attack)
 
 However, this technique is well documented. It's existed for years, and the
 solution to prevent Man in the Middle attacks is fairly simple. We use HTTPS.
@@ -164,7 +164,7 @@ access to resources I should normally not have access to. See figure
 [@fig:rev-proxy] for sample output from this reverse proxy server being set up
 against `demo.inspera.no` simply browsing the web-page in Chrome.
 
-![Reverse Proxy Server](src/chapter-3/server){#fig:rev-proxy}
+![Sample output from a reverse proxy server with logging enabled. Shows requests and response headers and status codes.](src/chapter-3/server){#fig:rev-proxy}
 
 Modifying the requests going back and forth between Safe Exam Browser and
 Inspera Assessment should allow me to do more or less anything you would be able

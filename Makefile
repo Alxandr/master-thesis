@@ -29,19 +29,22 @@ PANDOC             = pandoc
 PANDOC_LATEX_FLAGS = -M cref=true -f markdown -t latex --filter pandoc-mermaid --filter=pandoc-crossref --filter=pandoc-citeproc --bibliography references.bib --biblatex
 MARKDOWN_FILES     = $(shell find src -type f -name '*.md')
 TEX_FILES          = $(patsubst src/%.md,tex/%.tex,$(MARKDOWN_FILES))
+SVG_FILES          = $(shell find src -type f -name '*.svg')
+FIG_FILES          = $(patsubst src/%.svg,fig/%.pdf,$(SVG_FILES))
 
 # main production - make report
-report.pdf: tex report.tex report.blg $(TEX_FILES)
-	xelatex -interaction=nonstopmode report.tex
-
-# keep references up to date
-report.blg: references.bib
+report.pdf: tex report.tex $(TEX_FILES) $(FIG_FILES)
 	@xelatex -interaction=nonstopmode report.tex
 	biber report
+	xelatex -interaction=nonstopmode report.tex
 
 # ensure directories are created
 $(call create_dirs,$(TEX_FILES))
+$(call create_dirs,$(FIG_FILES))
 
 # convert single markdown file to latex
 tex/%.tex: src/%.md | $(TARGET_DIRS)
 	$(PANDOC) $(PANDOC_LATEX_FLAGS) -o $@ $<
+
+fig/%.pdf: src/%.svg | $(TARGET_DIRS)
+	inkscape -D -z --file=$(abspath $<) --export-pdf=$(abspath $@)

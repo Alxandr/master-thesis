@@ -1,8 +1,16 @@
 # Previous works
 This paper is built on previous research into SEB and digital exams already
-performed by other students at NTNU.
-
-> TODO: write more
+performed by other students at NTNU. Several attempts on working around Safe
+Exam Browser by way of tools such as remote desktops, virtual machines, etc.
+have been attempted [@Søgaard2015][@Søgaard2016]. Attempts have also been made
+at modifying Safe Exam Browser such that security measures could be toggled off,
+therefore I was initially not going to look at this. However, during my attempts
+at accessing Inspera Assessment without using Safe Exam Browser, I looked at the
+source code for Safe Exam Browser to understand how it generated the Browser
+Request Hash to figure out why my code wasn't working. Looking at the code I
+hyphotethised that it would actually be doable to use a modified version of
+Safe Exam Browser and have it generate the same Browser Request Hash, and some
+quick testing later proved that to be the case.
 
 ## Cheating in digital exams
 Another thing to look at is how prevalent cheating is in digital exams as
@@ -30,3 +38,4 @@ overwhelming majority of the students thought that they or others would be more
 likely to cheat in online classes. Since however the data doesn't necessarily
 support this, it might be a conception issue, or it may just be that digital
 exams are too new so people haven't had the opportunity to cheat with them.
+
