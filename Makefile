@@ -33,7 +33,7 @@ SVG_FILES          = $(shell find src -type f -name '*.svg')
 FIG_FILES          = $(patsubst src/%.svg,fig/%.pdf,$(SVG_FILES))
 
 # main production - make report
-report.pdf: tex report.tex $(TEX_FILES) $(FIG_FILES)
+report.pdf: tex report.tex title.tex tudelft-report.cls $(TEX_FILES) $(FIG_FILES)
 	@xelatex -interaction=nonstopmode report.tex
 	biber report
 	xelatex -interaction=nonstopmode report.tex

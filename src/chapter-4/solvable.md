@@ -83,3 +83,16 @@ Considering, however, that the student took effort to figure out how to get
 access to local resources during the exam, it's unlikely they didn't also take
 the time to figure out what local resources they could access without raising
 any flags.
+
+## Anti-plagiarism software
+The University of Southern Denmark has been successful in using anti-plagiarism
+software in order to catch students who have cheated on digital exams
+[@Nielsen2014]. Anti-plagiarism software can be a useful and automated tool to
+flag potentially cheating students, after which a manual investigation can be
+started. This is most useful however, in exams where students are allowed
+access to learning resources, online or not. The software might also be able
+to flag if two or more students are collaborating in some way during the exam.
+The paper on digital assessments at the University of Southern Denmark also
+states that the anti-plagiarism software has a preventative effect on cheating
+in that the students know that there is a higher chance of getting caught. No
+data is provided to support this claim however.

@@ -9,7 +9,15 @@ without the normal close/minimize/maximize buttons normally shown on windows
 almost zero, but do not provide much data to back this claim up. While it's true
 that having random questions would prevent the typical "look at another screen"
 kind of cheating, it does nothing to mitigate users accessing resources they
-should not have access to, online or not.
+should not have access to, online or not. A paper on digital exams at the
+University of Southern Denmark (SDU) in Denmark [@Nielsen2014] notes another
+potential advantage of having a digital question database in that such a system
+can provide statistics over the different questions, such that questions that
+everyone answers correctly or nobody answers correctly can be removed. One of
+the techniques SDU uses against cheating is anti-plagiarism software. They also
+let the students know beforehand that they are using such software, such that
+students are less likely to cheat because they know it's more likely that they
+will get caught.
 
 In the paper "Challenges of Online Exam, Performances and problems for Online
 University Exam" they propose using biometric sensors to authenticate users as a

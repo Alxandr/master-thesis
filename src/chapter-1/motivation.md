@@ -76,4 +76,8 @@ it's hard to do anything when cheating is detected. Accusing students of
 cheating can be costly, and the evidence is often not solid. This leads to
 administrators being reluctant to move forward when potential cheating is
 discovered. Therefore, if doable, a better approach than catching cheaters is
-to make sure that cheating can't occur in the first place.
+to make sure that cheating can't occur in the first place. Cheating might also
+adversely affect the image of company/software used to prevent cheating as they
+did not manage to achieve their sell-point. This might have monetary
+consequences because companies/software that are perceived as having weak
+cheating mitigation might not get customers.

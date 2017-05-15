@@ -71,7 +71,7 @@ this case you would likely have little to no clue of the fact that you did not
 get what you asked for, because for all intents and purposes you did. You just
 got a little something extra as a bonus, normally not visible to you at all.
 
-![An illustration of a typical man in the middle attack. Made by Wikimedia Commons user Miraceti [@Miraceti].](fig/chapter-3/Man_in_the_middle_attack)
+![An illustration of a typical man in the middle attack. Made by Wikimedia Commons user Miraceti [@Miraceti].](fig/chapter-3/Man_in_the_middle_attack){#fig:mitm}
 
 However, this technique is well documented. It's existed for years, and the
 solution to prevent Man in the Middle attacks is fairly simple. We use HTTPS.
