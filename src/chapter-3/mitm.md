@@ -302,4 +302,13 @@ Google Docs, and just navigate to Google Docs during the exam. You would have to
 solve the content policy problem, but that would be much easier than figuring
 out how to render a PDF or a Word document in the browser.
 
-
+## Applying outside BYOD
+Getting this exploit to work on a computer you do not have full access to is
+definitely a lot more tricky than one you can modify as you wish. The man in the
+middle reverse proxy server itself is not hard at all, and can be put on a tiny
+system-on-chip computer similar to, but much smaller than a raspberry pi. This
+device could then be connected between the internet connection of the client
+used to take the exam and the internet cable. The problem though is getting the
+certificate validated. Also, in the case of thin clients the only run something
+like a remote desktop, unless you have access to install the reverse proxy
+server inside the remote desktop this exploit is completely mitigated.

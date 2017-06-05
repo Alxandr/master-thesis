@@ -79,5 +79,9 @@ cocoa project. It is used by SEB to create the browser view on macs.
 ## Node.js
 Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine
 [@Node.js]. It is used to create all kinds of different applications, but was
-traditionally designed to enable the usage of JavaScript on the server. Node
-is used in this paper to a reverse proxy server described in a later chapter.
+traditionally designed to enable the usage of JavaScript on the server. Node is
+used in this paper to a reverse proxy server described in a later chapter. There
+is nothing specific about this proxy server that makes node a requirement, and
+it could just as easily have been written in python or Java for instance, it was
+simply picked because it fulfills the requirements of being cross-platform, and
+I am more familiar with it than the alternatives.

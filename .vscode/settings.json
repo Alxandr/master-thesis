@@ -1,4 +1,43 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-  "editor.rulers": [80,120]
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "spellchecker.language": "en_US",
+  "spellchecker.ignoreWordsList": [
+    "seb1",
+    "seb2",
+    "FEIDE",
+    "SHA256",
+    "HMAC",
+    "XULRunner",
+    "chromeless",
+    "NTNU",
+    "internet",
+    "Inspera",
+    "DDoS",
+    "online",
+    "Wikipedia",
+    "breakins",
+    "macOS",
+    "WebKit",
+    "username",
+    "alltogether",
+    "config",
+    "fullscreen",
+    "plugin",
+    "bootable",
+    "offline",
+    "intranet",
+    "harddrive"
+  ],
+  "spellchecker.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ],
+  "spellchecker.ignoreRegExp": [],
+  "spellchecker.ignoreFileExtensions": [],
+  "spellchecker.checkInterval": 5000
 }

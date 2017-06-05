@@ -77,3 +77,12 @@ Simply open up Visual Studio, create a new C# project, and add the installed
 Safe Exam Browser as a dependency of your project. You can then call public
 methods in Safe Exam Browser (like `ComputeBrowserExamKey`), or using reflection
 you could also call private methods (like `ComputeSEBComponentsHash`).
+
+## Applying outside BYOD {#sec:seb-outside-byod}
+Depending on the client used by the university to perform exams, the exploits
+relating to modifying SEB or creating programs that extract information out of
+the SEB config file is likely to still be usable. The application I wrote to
+brute force the config file (see [@sec:brute-force]) does not requires
+installing, nor administrator privileges to run. However, it does require that
+you have access to a windows desktop environment and are able to run arbitrary
+applications (prior to exam start).

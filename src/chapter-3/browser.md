@@ -98,3 +98,13 @@ exam starts (just as you normally would anyway), decrypt the config file, and
 setup either a proxy sever (like I've done) or a browser extension (if one was
 ever made) with the correct Browser Exam Key. Then you could start the exam in
 Chrome in fullscreen, and nobody looking at your screen would be the wiser.
+
+## Applying outside BYOD
+For the most part, using the exploits described here requires the same access
+as described in [@sec:seb-outside-byod]. It also requires a different browser
+than Safe Exam Browser to be available on the client. In the case where clients
+are regular remote desktop thin clients this is not much of a problem, but if
+the clients have been specifically designed with exams in mind, and they only
+run the examination software then doing the above would likely prove difficult.
+However, creating such clients would require a large amount of infrastructure to
+be in place.

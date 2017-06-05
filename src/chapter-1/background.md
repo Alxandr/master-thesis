@@ -49,3 +49,85 @@ students. Other errors might include:
 Another very real issue with digital exams is that they introduce new ways by
 which students might attempt to cheat at exams, which is mainly what I'll be
 looking at in this paper.
+
+## Different ways to do digital exams
+The solution currently employed by NTNU to facilitate digital exams is based on
+students bringing their own devices and then running software specified by the
+university to execute the exam. This is known as "bring your own device" or BYOD
+exams. An alternative to BYOD exams might be to build a computer lab and fill it
+with university owned computers or thin clients. Another different approach is
+simply having home exams. Each of these approaches have their own benefits and
+drawbacks, some of them being:
+
+### Cost
+Building out a computer lab and filling it with screens, keyboards, and
+computers (even if they are thin clients) can be very costly. Not to mention the
+fact that there is a high upkeep in that computers needs to be kept up to date,
+and that thousands of students using them every year might result in a high
+degree of wear resulting in things having to be replaced often. Another less
+visible cost is the fact that in order to run a lab of computers, staff that
+knows how to set them up and manage them is required. As opposed to simply
+buying computers which is a one time cost (if we ignore the need to ever replace
+any of them), having to pay several full-time employees to manage the computers
+might be just as expensive.
+
+On the other end of the scale, you have home exams, which depending on the exam
+in question might be entirely automated. In the case of a multiple choice exam
+for instance, students could sign in from home during the right time window,
+answer the questions, and the computer could immediately let them know what
+grade they achieved. BYOD exams are somewhere in the middle of the two.
+
+In a BYOD exam the university needs to provide a place to house the exam, and
+invigilators. This is the same cost as with traditional pen and paper exams
+though. However, with pen and paper exams, students don't typically need access
+to a power outlet. Another factor in the cost of a BYOD exam is that sometimes
+things go wrong, and there is a problem with a students hardware and it's
+compatibility with the software required to run the exam. In such cases the
+university is likely expected to provide a small number of computers or thin
+clients to enable these students to also take the exam. However, this is still
+much cheaper than having to provide a separate computer for each student.
+
+Another factor of the cost is who creates and manages the software used to
+perform the exams. Creating robust software is not cheap, and requires both time
+and money. It also needs to be maintained over time, and likely also evolved to
+fit new needs that arises along the way.
+
+### Required expertise
+If the university wants to run it's own in-house service solution for digital
+exams it needs server administrators that knows how to ensure that everything is
+running smoothly, and what to do when an error is encountered. In the case that
+the university wants to run it's own computer lab, skilled technicians are
+required to manage the computers and the network required for all of them to be
+connected to the internet.
+
+Even in the case where the home exam solution is opted for, a certain degree of
+expertise is needed. After all, exams still needs to be made, users needs to be
+given access the exams, and answers to the exams needs to be graded. While a
+large part of the responsibility can be outsourced to another company, someone
+at the university needs to know who things works. This is the case though,
+regardless if the solution is made in-house or purchased from a third party.
+
+### Security
+Security can have several meanings depending on the context. When talking about
+an online exam solution, hacking is a security concern. If the exam solution is
+offline however, and the exams are either handled entirely on the clients, or on
+a closed intranet, the risk of external hacking can be entirely eliminated.
+Security in the context of digital exams can also mean how hard it is to cheat
+at the exams. With home exams for instance, it's notoriously hard to prevent
+certain kinds of cheating, such as collaborating with other people. It's next to
+impossible to verify that the student taking the exam is doing so alone without
+having some kind of surveillance, which to a large extent defeats the whole
+point of home exams. Collaboration is much harder to do during an exam where the
+students are placed in the same room with oversight from invigilators.
+
+There are many more ways students can cheat during digital exams, several of
+which have been looked at by previous papers [@Søgaard2015][@Søgaard2016], and
+several others that will be examined in great detail in this thesis.
+
+## BYOD
+This thesis is primarily focused on the current solution to digital exams
+employed by NTNU, namely a BYOD solution using Safe Exam Browser and Inspera
+Assessment. Most of the issues and exploits discussed in this thesis are
+therefore only present during this form of examination. No assumption should be
+taken regarding the validity of any of the exploits discoverd during this thesis
+using any other form of digital examination.

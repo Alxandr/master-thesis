@@ -10,5 +10,7 @@ should not have access to, with the exception of attempting to access the exam
 itself from an unsafe environment.
 
 I will look at both technical and non-technical solutions to cheat at digital
-exams as they are held today at NTNU primarily with the goal of accessing
-resources I should not have access to during the exam.
+exams as they are held today at NTNU primarily with the goal of assessing
+resources I should not have access to during the exam. The focus will primarily
+be on Bring-Your-Own-Device (BYOD) digital exams as that is the format currently
+employed by NTNU to provide digital exams.
