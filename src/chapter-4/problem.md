@@ -1,12 +1,12 @@
-# Problem with todays solution
+# Problem with Todays Solution
 Before we can look at possible solutions to the digital exam problem, we have to
 take a closer look at the core of the problem, namely the fact that we have a
 server (Inspera Assessment) trying to validate what client software (Safe Exam
 Browser) is being used. The only way for two parties to have any form of
 validation (one or two way) is by way of either a shared secret, or public key
-cryptography. In either case the party that is to be validated need to hold some
-form of a secret that is either transmitted as is, or some product of it is
-transmitted to the other party. In our case that means that for Inspera
+cryptography. In either case, the party that is to be validated need to hold
+some form of a secret that is either transmitted as is, or some product of it is
+transmitted to the other party. In our case, that means that for Inspera
 Assessment to validate that we are indeed using Safe Exam Browser some secret
 needs to be transmitted to Inspera Assessment. This is effectively what happens
 with the Browser Exam Key.

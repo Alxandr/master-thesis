@@ -7,5 +7,5 @@ for some reason playing loud music while running Safe Exam Browser would allow
 you to access resources you should not be able to otherwise, this would
 obviously not be a practical exploit because the invigilators would shut you
 down immediately if you attempted to use it during an actual exam. However, in a
-purely technical bubble it would still be a perfectly valid exploit. I will
+purely technical bubble, it would still be a perfectly valid exploit. I will
 discuss this more in [@sec:technical].

@@ -2,7 +2,7 @@
 In this paper I will look at possible security exploits within the exam setup
 used by NTNU. I will mostly be looking at Inspera Assessment and the
 interactions between the Inspera LMS and SEB. I will not be attempting to do any
-data break in at Inspera or other disruptive actions that would potentially
+data break-in at Inspera or other disruptive actions that would potentially
 affect an exam like a Denial of Service attack (DoS) or the more common
 Distributed Denial of Service attack (DDoS). I will also not be attempting to
 get access to any resources from Inspera that I as a student taking an exam
@@ -12,5 +12,5 @@ itself from an unsafe environment.
 I will look at both technical and non-technical solutions to cheat at digital
 exams as they are held today at NTNU primarily with the goal of assessing
 resources I should not have access to during the exam. The focus will primarily
-be on Bring-Your-Own-Device (BYOD) digital exams as that is the format currently
+be on Bring Your Own Device digital exams as that is the format currently
 employed by NTNU to provide digital exams.

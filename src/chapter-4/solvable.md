@@ -1,4 +1,4 @@
-# Solvable problems
+# Solvable Problems
 It's important to take a step back and look at the overall problem we're trying
 to solve here. It's very easy to start asking questions such as "how can we make
 sure students are using Safe Exam Browser when connecting to Inspera
@@ -23,7 +23,7 @@ Preferably as hard as it is to cheat at a pen-and-paper exam. And in this case,
 by cheat we mean gain access to resources that has been deemed illegal to access
 during the exam.
 
-## Preventing access to online resources
+## Preventing Access to Online Resources
 The most damaging resource students can get access to during exams, and the
 easiest resource to block is arguably the internet. By simply disconnecting the
 students from the internet a whole slew of resources would be unavailable for
@@ -42,12 +42,12 @@ the exam, but students will not be allowed to access anything else.
 
 The reason why this is better than simply cutting internet access and running
 everything locally is the fact that most people nowdays has smartphones that can
-be used as wireless accesspoints. But not many people have computers capable of
+be used as wireless access points. But not many people have computers capable of
 connecting to two different wireless networks at the same time. The other part
 of the puzzle is that by forcing all the students to connect through a single
 router, all of them can be given the same public IP address. This would mean
 that we can validate on the server that the students are in fact connecting
-though the restricted network (instead of just using the cellphones as a
+through the restricted network (instead of just using the cell phones as a
 router).
 
 Next, the LMS needs to be designed in such a way that it can notice when
@@ -59,18 +59,18 @@ may mean that a student with a bad wireless card may get visited by the
 invigilators a few times during an exam, this should be a rather small price to
 pay.
 
-In terms of hardware/setup this is also not a very costly solution. It's much
+In terms of hardware/setup, this is also not a very costly solution. It's much
 cheaper than providing computers for each of the students during the exam. At
-the same time it increases the difficulty of accessing online resources without
+the same time, it increases the difficulty of accessing online resources without
 being caught to the stage of needing custom hardware to do so (for instance a
 computer with two wireless network cards).
 
-## Preventing access to local resources
+## Preventing Access to Local Resources
 It's likely not doable in any good way to prevent access to local resources. In
 all likelihood, Safe Exam Browser already does as good a job as can be done. You
 could arguably change Safe Exam Browser to some bootable examination system
 given to the students on a memory stick during the exam, but as explained in
-[@sec:id-invigilators] at the end of the day it's security theater. At some
+[@sec:id-invigilators] at the end of the day it's a security theater. At some
 point students will figure out how to get around it, and it'll be impossible to
 create a new system for every exam. A student could for instance very easily
 copy the content of the flash drive before booting from it, in which case he
@@ -78,13 +78,13 @@ would have ample time to analyze the content later and figure out how to work
 around it.
 
 Invigilators would probably be able to spot if someone does something stupid,
-like open a easily recognizable application like Microsoft Word during the exam.
-Considering, however, that the student took effort to figure out how to get
-access to local resources during the exam, it's unlikely they didn't also take
-the time to figure out what local resources they could access without raising
-any flags.
+like open an easily recognizable application like Microsoft Word during the
+exam. Considering, however, that the student took the effort to figure out how
+to get access to local resources during the exam, it's unlikely they didn't also
+take the time to figure out what local resources they could access without
+raising any flags.
 
-## Anti-plagiarism software
+## Anti-Plagiarism Software
 The University of Southern Denmark has been successful in using anti-plagiarism
 software in order to catch students who have cheated on digital exams
 [@Nielsen2014]. Anti-plagiarism software can be a useful and automated tool to

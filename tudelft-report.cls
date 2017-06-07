@@ -9,7 +9,7 @@
 \ExecuteOptions{english}
 \ProcessOptions\relax
 
-\LoadClass[10pt]{book}
+\LoadClass[12pt]{book}
 
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
@@ -154,13 +154,14 @@
 \fi
 
 %% Define the TU Delft house style colors.
-\definecolor{tudelft-cyan}{cmyk}{1,0,0,0}
+%\definecolor{tudelft-cyan}{cmyk}{0.6,0.04,0.21,0}
+\definecolor{tudelft-cyan}{cmyk}{0.34,1,0,0}
 \definecolor{tudelft-black}{cmyk}{0,0,0,1}
 \definecolor{tudelft-white}{cmyk}{0,0,0,0}
 \definecolor{tudelft-sea-green}{cmyk}{0.54,0,0.32,0}
 \definecolor{tudelft-green}{cmyk}{1,0.15,0.4,0}
 \definecolor{tudelft-dark-blue}{cmyk}{1,0.66,0,0.4}
-\definecolor{tudelft-purple}{cmyk}{0.98,1,0,0.35}
+\definecolor{tudelft-purple}{cmyk}{1,0.75,0,0.05}
 \definecolor{tudelft-turquoise}{cmyk}{0.82,0,0.21,0.08}
 \definecolor{tudelft-sky-blue}{cmyk}{0.45,0,0.06,0.06}
 \definecolor{tudelft-lavendel}{cmyk}{0.45,0.2,0,0.07}
@@ -210,9 +211,9 @@
 \setlength\@cover@spinewidth{0.375in}
 %% Width and height of the boxes on the front and back cover.
 \newlength\@cover@frontboxwidth
-\setlength\@cover@frontboxwidth{4.375in}
+\setlength\@cover@frontboxwidth{4.6in}
 \newlength\@cover@frontboxheight
-\setlength\@cover@frontboxheight{2.1875in}
+\setlength\@cover@frontboxheight{2.5in}
 \newlength\@cover@fronttextwidth
 \newlength\@cover@fronttextheight
 \newlength\@cover@backboxwidth

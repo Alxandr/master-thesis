@@ -1,6 +1,6 @@
-# Looking to others
+# Looking to Others
 NTNU is not the only, nor the first university to attempt to use digital exams,
-and other universities across the world has done so using different solutions.
+and other universities across the world have done so using different solutions.
 The Lebanese French University in Kurdistan developed their own solution using
 normal web technologies and a custom browser implementation written in C#
 without the normal close/minimize/maximize buttons normally shown on windows
@@ -39,7 +39,7 @@ Browser, they run a remote desktop client which connect to a server they control
 and also runs Safe Exam Browser which then connects to the LMS and allows access
 to selected client applications on said server [@Halbherr2014].
 
-ETH Zurich also takes snapshot of the screen at regular intervals. However,
+ETH Zurich also takes snapshots of the screen at regular intervals. However,
 these snapshots are never looked at unless requested by the student themselves.
 The students are assured that the snapshots will not be used to find cheaters,
 and are only there in case something goes wrong during the exam, so that most

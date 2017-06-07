@@ -16,3 +16,7 @@ NTNU
 FEIDE
 : Felles Elektronisk IDEntitet is a common identity solution employed by the
   Norwegian department of education.
+
+BYOD
+: Bring your own device. One of the forms of digital exams employed by
+  universities and other educational institutions around the world.

@@ -1,27 +1,27 @@
-# Injecting code into the safe environment
+# Injecting Code into the Safe Environment
 One of the ways to cheat at a digital exam in which a safe environment is
-prohibiting you from accessing your files and the internet, is to modify the
+prohibiting you from accessing your files and the Internet, is to modify the
 code running inside the safe environment itself. Instead of trying to break out
 of the safe environment or access the exam without using the safe environment,
 we try to trick the safe environment into believing code we wrote is actually
 part of what was intended to be executed as part of the examination. If we are
 successful in doing so, it would effectively render the safe environment useless
-as we would be able to access any resource available on the internet. Depending
-on how this code injection is done it would also be possible to get access to
+as we would be able to access any resource available on the Internet. Depending
+on how this code injection is done, it would also be possible to get access to
 local resources.
 
-## Man in the Middle attack
-One of the unique things about a browser (and working with the internet in
+## Man in the Middle Attack
+One of the unique things about a browser (and working with the Internet in
 general) is the fact that the browser executes code written by strangers sent to
 us over a wire we have little to no control over. Traditionally, software came
 with the computer, delivered by a company that you trusted and handed over as a
-physical object (in the form of a cd or floppy disk, or as part of the computer
+physical object (in the form of a CD or floppy disk, or as part of the computer
 itself). In order to breach that software and get your computer to execute code
 that you did not intend for it to execute, you would either have to get physical
 access to your computer, the shop where you bought your software, or the
 physical device used to transmit the software itself.
 
-After we started using the internet for distribution of software, a lot more
+After we started using the Internet for distribution of software, a lot more
 points of failure was introduced. What happens when you download a program from
 a website like `example.com` is (simplified) the following steps:
 
@@ -33,60 +33,61 @@ a website like `example.com` is (simplified) the following steps:
    request.
 5. Your computer receives the file requested.
 
-All of the steps above can be intercepted. For traditional software you download
-this has bad implications, because it can cause you to download virus software
-thinking it was something else. However, binary applications you download can
-generally mitigate this problem by also giving out a checksum of the software
-itself (it does require some manual work on the part of the user to verify it
-though). On the other hand, websites is another form of software, transfered as
-text, and executed by the browser without any regard for whether or not it may
-be what the user intended. This means that if we can get the browser to believe
-that the answer to the request sent to `example.com` is something we made up (
-instead of what actually is the answer from the `example.com` server) we can get
-the browser to do more or less whatever we want it to. This means that even if
-we are using Safe Exam Browser (which is still a browser), and it prevents us
-from accessing files and folders we have on our computer, and also prevents us
-from accessing the internet at large, by intercepting the request Safe Exam
-Browser makes to Inspera Assessment we can get it to do our bidding, instead
-of what it was intended to do.
+All of the steps above can be intercepted. For traditional software you
+download, this has bad implications, because it can cause you to download virus
+software thinking it was something else. However, binary applications you
+download can generally mitigate this problem by also giving out a checksum of
+the software itself (it does require some manual work on the part of the user to
+verify it though). On the other hand, websites is another form of software,
+transferred as text, and executed by the browser without any regard for whether
+or not it may be what the user intended. This means that if we can get the
+browser to believe that the answer to the request sent to `example.com` is
+something we made up ( instead of what actually is the answer from the
+`example.com` server) we can get the browser to do more or less whatever we want
+it to. This means that even if we are using Safe Exam Browser (which is still a
+browser), and it prevents us from accessing files and folders we have on our
+computer, and also prevents us from accessing the Internet at large, by
+intercepting the request Safe Exam Browser makes to Inspera Assessment we can
+get it to do our bidding, instead of what it was intended to do.
 
 Normally this attack is something that would be called as a Man in the Middle
-attack and is a well known attack vector against users who try to access
+attack and is a well-known attack vector against users who try to access
 websites. The reason it is called Man in the Middle attack is that it would
 typically be performed by someone who has access to hardware that is between you
 and the server you are trying to access. See [@fig:mitm] for example. For
 instance, in the request above to `example.com`, if the attacker had access to
-our router, he could instruct the router to reply to the DNS request for
-`example.com` with a IP address that he controls. Our browser would then happily
-connect to that IP address thinking it's connecting to `example.com` and take
-whatever it got sent it's way as what the user wanted to execute. Alternatively
-instead of modifying the DNS reply, he could listen for requests to the IP
-address that is `example.com`, and hijack the requests by not transmitting them
-to their final destination, instead replying with his own reply. Especially
-tricky is the fact that the attacker in this case knows the request you made to
-`example.com`, including any session data or username and passwords you sent
-with the request, meaning he could send the same request to `example.com`, get
-back the correct response, modify the response and then send it back to you. In
-this case you would likely have little to no clue of the fact that you did not
-get what you asked for, because for all intents and purposes you did. You just
-got a little something extra as a bonus, normally not visible to you at all.
+my router, he could instruct the router to reply to the DNS request for
+`example.com` with an IP address that he controls. Our browser would then
+happily connect to that IP address thinking it's connecting to `example.com` and
+take whatever it got sent its way as what the user wanted to execute.
+Alternatively, instead of modifying the DNS reply, he could listen for requests
+to the IP address that is `example.com`, and hijack the requests by not
+transmitting them to their final destination, instead replying with his own
+reply. Especially tricky is the fact that the attacker, in this case, knows the
+request you made to `example.com`, including any session data or username and
+passwords you sent with the request, meaning he could send the same request to
+`example.com`, get back the correct response, modify the response and then send
+it back to you. In this case you, would likely have little to no clue of the
+fact that you did not get what you asked for, because for all intents and
+purposes you did. You just got a little something extra as a bonus, normally not
+visible to you at all.
 
 ![An illustration of a typical man in the middle attack. Made by Wikimedia Commons user Miraceti [@Miraceti].](fig/chapter-3/Man_in_the_middle_attack){#fig:mitm}
 
-However, this technique is well documented. It's existed for years, and the
+However, this technique is well documented. It has existed for years, and the
 solution to prevent Man in the Middle attacks is fairly simple. We use HTTPS.
-The solution here is two-fold. The first part is simple encryption. By using
-public key cryptography we are able to encrypt our requests in such a way that
-an attacker is not able to see what we are requesting, they can also not see the
-response. And although they would be able to modify both the request and the
-response, since both are encrypted, any modification would result in the request
-being invalid. If a weak encryption is used, it might still be able to modify
-the requests and responses, but most certificate providers nowdays recommend a
-key length of at least 2048 bits RSA encryption. This means that in practice,
-tampering with requests is not doable.
+The solution here is two-fold. The first part is simply applying encryption. By
+using public key cryptography we are able to encrypt our requests in such a way
+that an attacker is not able to see what we are requesting, they can also not
+see the response. And although they would be able to modify both the request and
+the response, since both are encrypted, any modification would result in the
+request being invalid. If a weak encryption is used, it might still be able to
+modify the requests and responses, but most certificate providers nowdays
+recommend a key length of at least 2048 bits RSA encryption. This means that in
+practice, tampering with requests is not doable.
 
 However, just encryption is not good enough. It would still be easily doable
-for an attacker to respond with an IP address he controls to the DNS query for
+for an attacker to respond with an IP address they control to the DNS query for
 `example.com`. In such a case, if we only had encryption, our browser would
 connect to the server controlled by the attacker instead of the one we intended
 to connect to, and the result would be just as bad. However, HTTPS also provides
@@ -109,9 +110,9 @@ he owns `example.com` (even though he doesn't). These things put together makes
 Man in the Middle attacks generally unfeasible as long as websites are using the
 secure HTTPS protocol.
 
-## Creating your own certificate authority
+## Creating Your Own Certificate Authority
 As explained above, HTTPS is generally considered safe against man in the middle
-attack because strong encryption and a trusted certificate chain ensures that
+attack because strong encryption and a trusted certificate chain ensure that
 when Safe Exam Browser connects to Inspera Assessment, it is indeed Inspera
 Assessment that replies. If this is not the case, Safe Exam Browser will throw
 an error message (which incidentally will freeze up your computer without the
@@ -125,16 +126,16 @@ certainly they were not indented to prevent you from attacking yourself.
 
 The thing to remember is that while normally you would have an attacker trying
 to get access to data or trick you into running code you don't want to, in this
-case we do want to run our custom code, therefore there should normally be no
+case, we do want to run our custom code, therefore there should normally be no
 good reason for our computer to prevent us from so doing. Except that in this
 case we are running an exam using Safe Exam Browser, and running our custom code
 would be cheating. But still, these security measures have not been designed to
-prevent us from modifying or monitoring requests on our own machine, in fact
+prevent us from modifying or monitoring requests on our own machine, in fact,
 there is software written to enable just this. It turns out that being able to
 inspect network requests while developing things that sends network requests is
-quite useful. However, if those network requests are encrypted it would lose
-it's usability. The way to get around this is to create our own server with it's
-own certificate signed by our own certificate authority, and then use that as a
+quite useful. However, if those network requests are encrypted it would lose its
+usability. The way to get around this is to create our own server with its own
+certificate signed by our own certificate authority, and then use that as a
 proxy server for whatever secure resource we are attempting to access. All we
 then have to do is to install the certificate authority certificate (often
 called a root certificate) on our computer and we are all set.
@@ -150,7 +151,7 @@ concludes that the certificate can be trusted (because we explicitly told it
 we trust `Cheat CA` by installing it, and by extension we trust anything that
 `Cheat CA` trust, ie. signs).
 
-## Reverse code-injecting proxy {#sec:rev-proxy}
+## Reverse Code-Injecting Proxy {#sec:rev-proxy}
 Once we have our own certificate authority up and running, setting up a reverse
 proxy server is pretty straight forward. And as explained earlier, one of the
 security implications of the fact that we are running our exam in a browser is
@@ -198,35 +199,35 @@ cases where something goes wrong, instead it just leaves a blank window that
 you're not able to close. Without having the reset code available (which you
 typically wouldn't) the only way to get out of this state is to forcefully
 reboot the machine by holding down the power button. This made testing annoying
-and time consuming because any tiny change I did required a full reboot of the
+and time-consuming because any tiny change I did required a full reboot of the
 computer.
 
 After having attempted several ways of getting Safe Exam Browser to accept my
-custom certificate I eventually tried to use the network monitoring tool fiddler
-[@Telerik]. I already knew fiddler to be working, because I've used it many
-times when debugging websites, and I wanted to look at the data produced by
-Safe Exam Browser and the data produced by my reverse proxy and try to figure
-out what was different, however to my great surprise, I got the exact same error
-using fiddler. This lead me to the conclusion that Safe Exam Browser was not
-using the global store of certificates, but instead had it's own. This is also
+custom certificate I eventually tried to use the network monitoring tool Fiddler
+[@Telerik]. I already knew Fiddler to be working, because I've used it many
+times when debugging websites, and I wanted to look at the data produced by Safe
+Exam Browser and the data produced by my reverse proxy and try to figure out
+what was different, however to my great surprise, I got the exact same error
+using Fiddler. This lead me to the conclusion that Safe Exam Browser was not
+using the global store of certificates, but instead had its own. This is also
 the reason why Firefox (which is traditionally based on XULRunner) needs to be
 specially configured for using Fiddler [@Telerika]. However, since I can't
 really configure XULRunner without modifying Safe Exam Browser, and modifying
 Safe Exam Browser would defeat the purpose of the reverse proxy server
-alltogether, therefore the conclusion is that using a reverse proxy server for
+altogether, therefore the conclusion is that using a reverse proxy server for
 injecting code into Safe Exam Browser **if** the exam system runs over HTTPS on
-Windows is not possible. At least not easily possible. Fore more info on how it
-can possibly be done without changes to Safe Exam Browser see
+Windows is not possible. At least not easily possible. For more info on how it
+can possibly be done without changes to Safe Exam Browser see,
 [@sec:late-changes].
 
-Safe Exam Browser on OSX however, does not use XULRunner (even though XULRunner
-runs on all platforms). Instead, it uses a browser component based on the WebKit
-browser engine. In difference to the XULRunner browser engine used by Safe Exam
-Browser on Windows however, it does not have it own root certificate store. It
-instead (like most browsers) uses the operating system for dealing with what
-certificates to trust. This means that while it is not possible to use the
-reverse proxy server I wrote to modify requests and responses made by Safe Exam
-Browser on Windows, the same server does work on OSX.
+Safe Exam Browser on macOS however, does not use XULRunner (even though
+XULRunner runs on all platforms). Instead, it uses a browser component based on
+the WebKit browser engine. In difference to the XULRunner browser engine used by
+Safe Exam Browser on Windows however, it does not have its own root certificate
+store. It instead (like most browsers) uses the operating system for dealing
+with what certificates to trust. This means that while it is not possible to use
+the reverse proxy server I wrote to modify requests and responses made by Safe
+Exam Browser on Windows, the same server does work on macOS.
 
 ## Modifying the LMS {#sec:modifying-lms}
 While being able to set up a reverse proxy server that you can use to inspect
@@ -235,13 +236,13 @@ certainly helpful when doing other exploits, it is not really an exploit in and
 of itself. Only by modifying the responses coming from the LMS or by crafting
 custom requests going there are we able to gain access to restricted resources.
 If the LMS system has any security exploits like the client deciding whether or
-not an answer to a question is correct this would enable us to forge requests
-going to the LMS just telling the LMS that we answered all the questions
-correctly. This however is not the case with Inspera Assessment. Instead, from
-the data I've seen going between Safe Exam Browser and Inspera Assessment for
-demo exams that were set up so I could do this testing it seems that they simply
-store the answers to the questions, and figuring out whether or not they are
-correct is either done on the server, or at a later time by a human.
+not an answer to a question is correct, this would enable us to forge requests
+going to the LMS just telling it that we answered all the questions correctly.
+This however, is not the case with Inspera Assessment. Instead, from the data
+I've seen going between Safe Exam Browser and Inspera Assessment for demo exams
+that were set up so I could do this testing, it seems that they simply store the
+answers to the questions, and figuring out whether or not they are correct is
+either done on the server, or at a later time by a human.
 
 ![Accessing Wikipedia inside Inspera Assessment running in Safe Exam Browser.](src/chapter-3/wiki){#fig:wikipedia}
 
@@ -259,24 +260,24 @@ Inspera Assessment and not an external resource.
 exam software. Obviously this does not do a good job of masking the fact that
 you're using resources you should not be, because Bing with it's glaring colors
 stands out like a sore thumb, but the fact that I can make a button on the
-bottom bare (where you go from question to question) that gives you access to
-the internet is still quite telling. If I instead of making a search button made
-a chat button, and designed a chat that used the same fonts, and same style as
-Inspera Assessment itself, it would look like just another question page. You
-can hide what you're doing in plain sight to the point where people would have
-to read the actual text to figure out that something is wrong.
+bottom bar (where you go from question to question) that gives you access to the
+Internet is still quite telling. If I instead of making a search button made a
+chat button, and designed a chat that used the same fonts and style as Inspera
+Assessment itself, it would look like just another question page. You can hide
+what you're doing in plain sight to the point where people would have to read
+the actual text to figure out that something is wrong.
 
 Another option would be to make things invisible by default, such that if you
 click a specific set of key combinations the search window pops up, and when you
 let go it vanishes. This too would make it almost impossible for invigilators to
 figure out that you are cheating.
 
-## What you can't do with this exploit
+## What You Can't Do with This Exploit
 There are some things that does not work with the code injecting exploit for
 various reason, some of which are easy to solve and some of which are not.
-Amongst the things that does not not work with the current implementation of the
+Amongst the things that do not work with the current implementation of the
 reverse proxy server is using Google instead of Bing as the search engine for
-instance. The reason Google does not work is because they provide a
+instance. The reason Google does not work is that they provide a
 `content-policy` header that forbids the hosting of their websites inside
 `iframes` (which is how I've done it with Bing and Wikipedia). This is however
 rather easy to get around, and the solution is the same as what we're already
@@ -285,10 +286,10 @@ server we don't own. So enabling Google would be as simple as generating a new
 certificate, modifying my reverse proxy server to remove a specific server, and
 making sure request to Google also go through my reverse proxy. The problem with
 this though is that while doing so for one or domains is not too much work,
-eventually you would have to make a system that auto-generates certificates for
-you (the way fiddle does). Since you don't know which websites uses this
+eventually, you would have to make a system that auto-generates certificates for
+you (the way fiddle does). Since you don't know which websites use this
 `content-policy` header, you would have to run everything through your reverse
-proxy server. For the simple demonstration required in this thesis it was much
+proxy server. For the simple demonstration required in this thesis, it was much
 easier to just go with Bing that just works as is.
 
 Another thing that this solution does not really help you with is getting access
@@ -302,13 +303,13 @@ Google Docs, and just navigate to Google Docs during the exam. You would have to
 solve the content policy problem, but that would be much easier than figuring
 out how to render a PDF or a Word document in the browser.
 
-## Applying outside BYOD
+## Applying Outside BYOD
 Getting this exploit to work on a computer you do not have full access to is
 definitely a lot more tricky than one you can modify as you wish. The man in the
 middle reverse proxy server itself is not hard at all, and can be put on a tiny
 system-on-chip computer similar to, but much smaller than a raspberry pi. This
-device could then be connected between the internet connection of the client
-used to take the exam and the internet cable. The problem though is getting the
-certificate validated. Also, in the case of thin clients the only run something
+device could then be connected between the Internet connection of the client
+used to take the exam and the Internet cable. The problem though is getting the
+certificate validated. Also, in the case of thin clients that only run something
 like a remote desktop, unless you have access to install the reverse proxy
 server inside the remote desktop this exploit is completely mitigated.
